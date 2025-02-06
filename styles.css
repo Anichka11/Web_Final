@@ -1,0 +1,339 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+/* //Burger Menu Icon */
+.burger-menu {
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #ff7f50;
+    color: #fff;
+}
+
+/* Main Content Section */
+main {
+    flex: 1;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* Featured Cocktails Gallery */
+.cocktail-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.cocktail-item {
+    width: 30%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cocktail-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+}
+
+.cocktail-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cocktail-item:hover img {
+    transform: scale(1.1);
+}
+
+.cocktail-item p {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+    font-size: 1.2em;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    position: relative;
+}
+
+/* Burger Menu (Font Awesome Icon) */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 1.9em;  /* Adjust the size as needed */
+    color: white;
+    position: absolute;
+    top: 1px;
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block; /* Show the burger menu on small screens */
+    }
+
+    nav ul {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: #222;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when 'show' class is added */
+    }
+}
+
+
+/* Button Styles */
+button {
+    background-color: #ff7f50;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6347;
+}
+
+
+
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+
+
+
+
+
+
+/* Contact Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #555;
+}
+
+input, textarea {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input[type="text"], input[type="email"] {
+    height: 45px;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+button {
+    background-color: #ff6347;
+    color: white;
+    font-size: 1em;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Message area styles (for consistency) */
+textarea {
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+
+
+
+
+
+
+
+
+/* cookies */
+.cookie-notification {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px var(--primary-black);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+  }
+  
+  .cookie-notification.show {
+    opacity: 1;
+    visibility: visible;
+    animation: popUp 0.5s ease-in-out;
+  }
+  
+  @keyframes popUp {
+    from {
+      transform: translateX(-50%) translateY(100%);
+    }
+    to {
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
+  .accept-button {
+    background-color: var(--cookies-grey);
+    color: var(--primary-white);
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+  }
+  
+  .accept-button:hover {
+    background-color: var(--cookies-hover-gray);
+    border: 3px solid var(--primary-black);
+  }
+  
+  .hidden {
+    display: none;
+  }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Recipes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="burger-menu" id="burger-menu" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i> 
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Discover Amazing Cocktails</h1>
+        <p>Explore a variety of cocktail recipes with amazing flavors.</p>
+
+        <section class="cocktail-gallery">
+            <div class="cocktail-item">
+                <img src="images/margarita.jpg" alt="Margarita">
+                <p>Margarita</p>
+            </div>
+            <div class="cocktail-item">
+                <img src="images/mojito.webp" alt="Mojito">
+                <p>Mojito</p>
+            </div>
+            <div class="cocktail-item">
+                <img src="images/cosmopolitan.webp" alt="Cosmopolitan">
+                <p>Cosmopolitan</p>
+            </div>
+            <div class="cocktail-item">
+                <img src="images/elpresidente.webp" alt="El Presidente">
+                <p>El Presidente</p>
+            </div>
+            <div class="cocktail-item">
+                <img src="images/pinacolada.webp" alt="Piña Colada">
+                <p>Piña Colada</p>
+            </div>
+            <div class="cocktail-item">
+                <img src="images/whiskeysour.jpg" alt="Whiskey Sour">
+                <p>Whiskey Sour</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Cocktail Recipes</p>
+    </footer>
+
+    <div id="cookie-notification" class="cookie-notification">
+        <p>This website uses cookies to ensure you get the best experience. <a href="#">Learn more</a>.</p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
