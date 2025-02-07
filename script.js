@@ -1,35 +1,40 @@
-/* cookies */
+// cookie
 function setCookie(name, value, days) {
     const date = new Date();
     date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000); 
     const expires = "expires=" + date.toUTCString();
     document.cookie = `${name}=${value}; ${expires}; path=/`;
-  }
-  
-  // Function to get a cookie by name
-  function getCookie(name) {
+}
+
+function getCookie(name) {
     const cookies = document.cookie.split("; ");
     for (const cookie of cookies) {
         const [key, value] = cookie.split("=");
         if (key === name) return value;
     }
     return null;
-  }
-  
-  document.addEventListener("DOMContentLoaded", () => {
-      const cookieNotification = document.getElementById("cookie-notification");
-      const acceptButton = document.getElementById("accept-cookies");
-  
-      cookieNotification.classList.add("show");
-      cookieNotification.classList.remove("hidden");
-  
-      acceptButton.addEventListener("click", () => {
-          cookieNotification.classList.remove("show");
-          setTimeout(() => {
-              cookieNotification.style.display = "none"; 
-          }, 500);
-      });
-  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cookieNotification = document.getElementById("cookie-notification");
+    const acceptButton = document.getElementById("accept-cookies");
+
+    if (getCookie("cookies_accepted")) {
+        cookieNotification.style.display = "none"; 
+        return;
+    }
+
+    cookieNotification.classList.add("show");
+    cookieNotification.classList.remove("hidden");
+
+    acceptButton.addEventListener("click", () => {
+        setCookie("cookies_accepted", "true", 365); 
+        cookieNotification.classList.remove("show");
+        setTimeout(() => {
+            cookieNotification.style.display = "none"; 
+        }, 500);
+    });
+});
 
 
 
